@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1.logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 class="logo">Dessertino</h1>
+    </center>
+
+    <form method="" action="" name="pay_form" onsubmit="return validate()">
+        <h2>Payment Form</h2>
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" placeholder="Address" rows="4" required></textarea>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" id="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female" required>
+        <label for="female">Female</label>
+<br>
+        <label for="email">Email Id:</label>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+<br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" name="mobile" id="mobile" placeholder="Mobile number" required>
+<br><br>
+        <label for="payment-option">Payment option:</label>
+        <select name="payment-option" id="payment-option" required>
+            <option value="" disabled selected>Select option</option>
+            <option value="Debit card">Debit Card</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="UPI">UPI</option>
+            <option value="COD">COD</option>
+        </select>
+
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" name="reset" value="Reset">
+    </form>
+</body>
+</html>
