@@ -14,7 +14,6 @@ const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 addToCartButtons.forEach(button => {
   button.addEventListener('click', addToCart);
 });
-
 // Function to handle adding an item to the cart
 function addToCart(event) {
   const button = event.target;
