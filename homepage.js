@@ -5,4 +5,4 @@ var btn = document.getElementById('btn');
 btn.addEventListener('click', function() {
   // Load the payment.html file into the current page
   window.location.href = 'index.html';
-});
+}); 
